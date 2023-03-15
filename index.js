@@ -121,6 +121,7 @@ document.querySelector("#submit").addEventListener("click", function() {
           examTime: timeTaken.innerText,
           status: grade.status,
         },
+        
       ])
     );
   } else {
