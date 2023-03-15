@@ -23,8 +23,8 @@ startQuiz.addEventListener("click", () => {
 
   let x = setInterval(() => {
     if (counterNum < 0) {
-      coutDown.classList.remove("flex");
-      coutDown.classList.add("hidden");
+      countDown.classList.remove("flex");
+      countDown.classList.add("hidden");
       counterNum = 3;
       count = 0;
       timer = null;
@@ -44,21 +44,23 @@ startQuiz.addEventListener("click", () => {
 });
 
 // All quiz data fetched from json
+
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
-  const data = await res.json;
+  const data = await res.json();
   quizData = data;
-  displayQuiz(data);
+  displayQuiz(data)
 };
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
+  //console.log(data)
   if (!data) {
-    quizContainer.innerHTML = "";
+    quizContainer.innerHTML= "";
     return;
   }
-
-  data.forEach((quiz, i) => {
+  data.forEach((quiz, i) =>{
+    //console.log(quiz);
     quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
@@ -74,7 +76,7 @@ const displayQuiz = (data) => {
 };
 
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click", () => {
+document.querySelector("#submit").addEventListener("click", function() {
   if (answers.length < 6) {
     return;
   }
