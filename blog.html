@@ -6,16 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Site Details</title>
     <!--tailwind file-->
-    
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-emerald-100">
     <!--header open-->
     <header>
-        <h1></h1>
+        <h1 class="text-center text-4xl font-bold mt-4">Blog Question Answer</h1>
     </header>
     <!--header colsed-->
     <!--Details section open-->
-    <section></section>
+    <section class="container mx-auto mt-4">
+        <!--Question: 01-->
+        <h1 class="text-2xl font-extrabold">Difference between foreach and map and filter and find in javascript</h1>
+        <p class="mt-2 font-semibold">
+            The first difference between map() and forEach() is the returning value. The forEach() method 
+            returns undefined and map() returns a new array with 
+            the transformed elements. Even if they do the same job, the returning value remains different
+        </p>
+        <!--Question: 02-->
+        <h1 class="text-2xl font-extrabold">
+            localstorage vs sessionstorage
+        </h1>
+        <p class="mt-2 font-semibold">
+            sessionStorage is similar to localStorage ; the difference is that while data in localStorage 
+            doesn't expire, data in sessionStorage is cleared when the page session ends. Whenever a document
+             is loaded in a particular tab in the browser, 
+            a unique page session gets created and assigned to that particular tab
+        </p>
+        <!--Question: 03-->
+        <h1 class="text-2xl font-extrabold">how to work even loop in javascript</h1>
+        <p class="mt-2 font-semibold">
+            The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. 
+            If the Call Stack is empty, the Event Loop will take the first event from the queue and will
+             push it to the Call Stack,
+             which effectively runs it. Such an iteration is called a tick in the Event Loop.
+        </p>
+        <!--Question: 04-->
+        <h1 class="text-2xl font-extrabold">How to work chooseQuiz</h1>
+        <p class="mt-2 font-semibold">
+            chooseQuiz ti akta prokriyai colche,,question ar 4 ta option ar je kon akta 
+            jen click korte pari ai kaj ta chooseQuiz a kora hoyche?
+        </p>
+    </section>
     <!--closed-->
+
+    <!--js add file-->
+    <script src="index.js"></script>
 </body>
 </html>
